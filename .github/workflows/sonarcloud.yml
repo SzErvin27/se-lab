@@ -27,8 +27,8 @@ jobs:
       - name: Cache Maven packages
         uses: actions/cache@v3
         with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/lab2-master/pom.xml') }}
+          path: ~/lab2-master/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build and analyze
         env:
